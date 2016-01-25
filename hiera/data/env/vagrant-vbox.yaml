@@ -121,11 +121,76 @@ rjil::neutron::contrail::fip_pools:
 
 contrail::vrouter::vgw_subnets: ['100.1.0.0/24']
 rjil::system::apt::env_repositories:
-  contrailv2:
-    location: 'http://jiocloud.rustedhalo.com/contrailv2'
-    release: 'trusty'
+  rolling_jorc_test_repo:
+    location: 'http://10.140.221.229/apt/anshprat/anshutest/'
+    release: 'jiocloud'
     repos: 'main'
     include_src: false
+    key:
+      id: '79B2F8CF206014193A1B370B056813FD810EF8E9'
+      content: |
+        -----BEGIN PGP PUBLIC KEY BLOCK-----
+        Version: GnuPG v1
+
+        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
+        YFw/NNJDxc54TfySmIXUWfQJ0A==
+        =hJQ2
+        -----END PGP PUBLIC KEY BLOCK-----
 
 ntp::servers:
   - 10.140.221.235
